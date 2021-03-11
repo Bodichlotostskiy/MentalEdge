@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:MentalEdge.Controls"
+             mc:Ignorable="d"
+             x:Class="MentalEdge.Views.List">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button ImageSource="Frame.png" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="40" HeightRequest="40" Clicked="Button_Clicked"  BackgroundColor="Transparent"/>
+            <ScrollView>
+            <StackLayout  Spacing="-5">
+               
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1.08*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="img1.png" Margin="16,0,0,0" />
+                    <StackLayout Grid.Column="1" VerticalOptions="Center" Margin="8" >
+                        <Label Text="Mental Edge"
+                               TextColor="White"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Start"
+                               FontSize="20"/>
+                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue tortor eu tellus sit praesent feugiat. Nunc."
+                               HorizontalOptions="StartAndExpand"
+                               VerticalOptions="Start"
+                               FontSize="12"
+                               TextColor="#999999"/>
+                        <Label Text="15:00"
+                               FontSize="12"
+                               TextColor="#999999"
+                               Margin="0,10,0,0"/>
+                    </StackLayout>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1.08*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="img2.png" Margin="16,0,0,0" />
+                    <StackLayout Grid.Column="1" VerticalOptions="Center" Margin="8">
+                        <Label Text="Mental Edge"
+                               TextColor="White"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Start"
+                               FontSize="20"/>
+                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue tortor eu tellus sit praesent feugiat. Nunc."
+                               HorizontalOptions="StartAndExpand"
+                               VerticalOptions="Start"
+                               FontSize="12"
+                               TextColor="#999999"/>
+                        <Label Text="15:00"
+                               FontSize="12"
+                               TextColor="#999999"
+                               Margin="0,10,0,0"/>
+                    </StackLayout>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1.08*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="img3.png" Margin="16,0,0,0" />
+                    <StackLayout Grid.Column="1" VerticalOptions="Center" Margin="8">
+                        <Label Text="Mental Edge"
+                               TextColor="White"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Start"
+                               FontSize="20"/>
+                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue tortor eu tellus sit praesent feugiat. Nunc."
+                               HorizontalOptions="StartAndExpand"
+                               VerticalOptions="Start"
+                               FontSize="12"
+                               TextColor="#999999"/>
+                        <Label Text="15:00"
+                               FontSize="12"
+                               TextColor="#999999"
+                               Margin="0,10,0,0"/>
+                    </StackLayout>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1.08*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="img4.png" Margin="16,0,0,0" />
+                    <StackLayout Grid.Column="1" VerticalOptions="Center" Margin="8">
+                        <Label Text="Mental Edge"
+                               TextColor="White"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Start"
+                               FontSize="20"/>
+                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue tortor eu tellus sit praesent feugiat. Nunc."
+                               HorizontalOptions="StartAndExpand"
+                               VerticalOptions="Start"
+                               FontSize="12"
+                               TextColor="#999999"/>
+                        <Label Text="15:00"
+                               FontSize="12"
+                               TextColor="#999999"
+                               Margin="0,10,0,0"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+           
+        </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

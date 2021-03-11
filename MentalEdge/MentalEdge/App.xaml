@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:magicGradients="clr-namespace:MagicGradients;assembly=MagicGradients"
+             x:Class="MentalEdge.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            
+            <!-- App colors -->
+            <Color x:Key="me-white">#FFFFFF</Color>
+            <Color x:Key="DarkBlue">Darkblue</Color>
+            <Color x:Key="Active">#20DF92</Color>
+            <Color x:Key="Red">Red</Color>
+            <Color x:Key="Primary">#16FFFFFF</Color>
+            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Style TargetType="Button">
+                <Setter Property="HeightRequest" Value="60"></Setter>
+                <Setter Property="CornerRadius" Value="10"></Setter>
+                <Setter Property="TextTransform" Value="None"></Setter>
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="BackgroundColor" Value="{StaticResource Active}"></Setter>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters> 
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="White" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+            <Style x:Key="BaseStyleTwo" TargetType="Element">
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#1B1D28" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="Black"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#999999"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.NavBarHasShadow" Value="False"/>
+                <Setter Property="Shell.NavBarIsVisible" Value="False"/>
+            </Style>
+
+
+            <!-- Background gradient template -->
+            <ControlTemplate x:Key="PageWithGradient">
+                <Grid>
+                    <magicGradients:GradientView VerticalOptions="FillAndExpand" >
+                        <magicGradients:GradientView.GradientSource>
+                            <magicGradients:CssGradientSource>
+                                <x:String>
+                                    <![CDATA[
+                                        linear-gradient( 227.6deg, rgb(16, 15, 45) 0%, #1C3937 100%, rgba(27,57,55,1) 100%)
+                                    ]]>
+                                </x:String>
+                            </magicGradients:CssGradientSource>
+                        </magicGradients:GradientView.GradientSource>
+                    </magicGradients:GradientView>
+                    <ContentPresenter />
+                </Grid>
+            </ControlTemplate>
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid>
+                                <magicGradients:GradientView VerticalOptions="FillAndExpand" >
+                                    <magicGradients:GradientView.GradientSource>
+                                        <magicGradients:CssGradientSource>
+                                            <x:String>
+                                                <![CDATA[
+                                                    linear-gradient( 227.6deg, rgb(16, 15, 45) 0%, #1C3937 100%, rgba(27,57,55,1) 100%)
+                                                ]]>
+                                            </x:String>
+                                        </magicGradients:CssGradientSource>
+                                    </magicGradients:GradientView.GradientSource>
+                                </magicGradients:GradientView>
+                                <ContentPresenter />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            
+        </ResourceDictionary>        
+    </Application.Resources>
+</Application>

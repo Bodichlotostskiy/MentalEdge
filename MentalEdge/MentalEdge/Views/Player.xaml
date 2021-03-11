@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:MentalEdge.Controls"
+             mc:Ignorable="d"
+             x:Class="MentalEdge.Views.Player">
+    <ContentPage.Content>
+        <Grid>
+            <RelativeLayout>
+            <Grid x:Name="parent" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+              RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.31,Constant=0}"
+              RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.69,Constant=0}"
+              VerticalOptions="FillAndExpand" />
+                <Button  ImageSource="Frame.png" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="40" HeightRequest="40" Clicked="Button_Clicked"  BackgroundColor="Transparent"/>
+                <Grid
+                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.04,Constant=0}"
+                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+                      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.55,Constant=0}"
+                      TranslationY="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="0.13*"/>
+                        <RowDefinition Height="0.08*"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="imgPlayer.png" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,0,0,0"/>
+                    <Label Grid.Row="1" Text="Mental breathe" VerticalOptions="End" HorizontalOptions="Center" TextColor="White"  FontSize="24" FontFamily="Poppins"/>
+                    <Label Grid.Row="2" Text="Mental Tracks"  VerticalOptions="End" HorizontalOptions="Center"  TextColor="Gray" FontSize="14"   FontFamily="Poppins"/>
+                </Grid>
+                
+
+
+                <Grid 
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=parent, Property=X}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=parent, Property=Y, Factor=1}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=parent, Property=Width, Factor=1}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=parent, Property=Height, Factor=1}" 
+                 Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Orientation="Horizontal" Margin="20,-10,20,0">
+
+                        <Button  VerticalOptions="Center" TranslationX="15" HorizontalOptions="Start" ImageSource="back.png" BackgroundColor="Transparent" Clicked="Button_Clicked_1" />
+                        <Button VerticalOptions="Center" HorizontalOptions="FillAndExpand" HeightRequest="64" ImageSource="pause.png" BackgroundColor="Transparent" Clicked="Button_Clicked_2"/>
+                        <Button VerticalOptions="Center" TranslationX="-15" HorizontalOptions="End" ImageSource="forward.png" BackgroundColor="Transparent" Clicked="Button_Clicked_3"/>
+
+                    </StackLayout>
+                    
+                    
+                    
+                    <Label Grid.Row="1" Text="00:04" TranslationX="15" TextColor="Gray" FontSize="12" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                    <Label Grid.Row="1" Text="-3:18" TranslationX="-15" TextColor="Gray" FontSize="12" HorizontalTextAlignment="End" VerticalTextAlignment="Start"/>
+
+                    <Slider x:Name="timeline" Grid.Row="1" 
+                            Minimum="0"
+                            Maximum="100"
+                            Value="30"
+                            ValueChanged="Slider_ValueChanged"
+                            MinimumTrackColor="{StaticResource Active}"
+                            ThumbColor="Transparent"/>
+
+
+                </Grid>
+
+
+
+            </RelativeLayout>
+        </Grid>
+
+        
+    </ContentPage.Content>
+</ContentPage>
