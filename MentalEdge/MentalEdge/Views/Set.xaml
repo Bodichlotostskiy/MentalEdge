@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:controls="clr-namespace:MentalEdge.Controls"
              mc:Ignorable="d"
-             x:Class="MentalEdge.Views.Set">
+             x:Class="MentalEdge.Views.Set"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" ios:Page.UseSafeArea="true">
     <ContentPage.Content>
         <StackLayout>
             <Button  ImageSource="Frame.png" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="40" HeightRequest="40" Clicked="Button_Clicked"  BackgroundColor="Transparent"/>
@@ -14,9 +15,13 @@
                     <Label Text="Today`s Performance" FontSize="24" TextColor="White" Margin="0,0,0,10"/>
                     <Label Text="Profit or Loss" FontSize="20" TextColor="White" Margin="0,10,0,10" />
                     <controls:MEEntry
+                        
+                        Padding="20,0,0,0"
                         x:Name="textbar1"
                         Margin="0,10,0,0"
                         Placeholder="$"
+                        TextChanged="textbar1_TextChanged"
+                        Text="{Binding textbar1.Text, StringFormat='${0}'}"
                         Keyboard="Numeric"
                         WidthRequest="10"
                         HeightRequest="60"
@@ -34,24 +39,24 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <StackLayout Grid.Column="0" Scale="1">
-                            <Image  Source="angrysmile.png"/>
-                            <Label  Text="Train Wrec" FontSize="14" TranslationX="8" TextColor="White" VerticalOptions="EndAndExpand"/>
+                            <Image  Source="angrysmile.png" HorizontalOptions="Center"/>
+                            <Label  Text="Train Wreck" FontSize="14" TranslationX="8" HorizontalOptions="Center" TextColor="White" VerticalOptions="EndAndExpand"/>
                         </StackLayout>
                         <StackLayout Grid.Column="1" Scale="0.5">
-                            <Image Source="sadsmile.png"/>
-                            <Label Text="Stressed" FontSize="11"  TextColor="White" VerticalOptions="End"/>
+                            <Image Source="sadsmile.png" HorizontalOptions="Center"/>
+                            <Label Text="Stressed" FontSize="11" HorizontalOptions="Center" TextColor="White" VerticalOptions="End"/>
                         </StackLayout>
                         <StackLayout Grid.Column="2" Scale="0.5">
-                            <Image  Source="smile.png"/>
-                            <Label  Text="Neutral" FontSize="14"   TextColor="White" VerticalOptions="End"/>
+                            <Image  Source="smile.png" HorizontalOptions="Center"/>
+                            <Label  Text="Neutral" FontSize="14" HorizontalOptions="Center"  TextColor="White" VerticalOptions="End"/>
                         </StackLayout>
                         <StackLayout Grid.Column="3" Scale="0.5">
-                            <Image Source="nicesmile.png" />
-                            <Label  Text="Relaxed" FontSize="13" TextColor="White"  VerticalOptions="End"/>
+                            <Image Source="nicesmile.png" HorizontalOptions="Center"/>
+                            <Label  Text="Relaxed" FontSize="13" HorizontalOptions="Center" TextColor="White"  VerticalOptions="End"/>
                         </StackLayout>
                         <StackLayout Grid.Column="4" Scale="0.5">
-                            <Image  Source="coolsmile.png"/>
-                            <Label Text="Cool"  FontSize="14" TextColor="White" TranslationX="7"  VerticalOptions="End"/>
+                            <Image  Source="coolsmile.png" HorizontalOptions="Center"/>
+                            <Label Text="Cool" HorizontalOptions="Center" FontSize="14" TextColor="White"  VerticalOptions="End"/>
                         </StackLayout>
                     </Grid>
                     <Slider Minimum="0"
@@ -71,24 +76,24 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <StackLayout Grid.Column="0" Scale="1">
-                            <Image  Source="angrysmile.png"/>
-                            <Label  Text="Didn`t Sleep" FontSize="13" TranslationX="8" TextColor="White" VerticalOptions="EndAndExpand"/>
+                            <Image  Source="angrysmile.png" HorizontalOptions="Center"/>
+                            <Label  Text="Didn`t Sleep" FontSize="13" TranslationX="8" TextColor="White" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
                         </StackLayout>
                         <StackLayout Grid.Column="1" Scale="0.5">
-                            <Image Source="sadsmile.png"/>
-                            <Label Text="Dificalty Sleeping" FontSize="12"  TextColor="White" VerticalOptions="End"/>
+                            <Image Source="sadsmile.png" HorizontalOptions="Center"/>
+                            <Label Text="Difficalty Sleeping" FontSize="12"  TextColor="White" HorizontalOptions="Center" VerticalOptions="End"/>
                         </StackLayout>
                         <StackLayout Grid.Column="2" Scale="0.5">
-                                <Image  Source="smile.png"/>
-                            <Label  Text="Slept Ok" FontSize="14" TranslationX="8"  TextColor="White" VerticalOptions="End"/>
+                            <Image  Source="smile.png" HorizontalOptions="Center"/>
+                            <Label  Text="Slept Ok" FontSize="14" TranslationX="8"  TextColor="White" HorizontalOptions="Center" VerticalOptions="End"/>
                         </StackLayout>
                         <StackLayout Grid.Column="3" Scale="0.5">
-                            <Image Source="nicesmile.png" />
-                            <Label  Text="Slept good" FontSize="14" TranslationX="8" TextColor="White"  VerticalOptions="End"/>
+                            <Image Source="nicesmile.png" HorizontalOptions="Center"/>
+                            <Label  Text="Slept good" FontSize="14" TranslationX="8" TextColor="White" HorizontalOptions="Center" VerticalOptions="End"/>
                         </StackLayout>
                         <StackLayout Grid.Column="4" Scale="0.5">
-                            <Image  Source="coolsmile.png"/>
-                            <Label Text="slept like a baby"  FontSize="11" TextColor="White"   VerticalOptions="End"/>
+                            <Image  Source="coolsmile.png" HorizontalOptions="Center"/>
+                            <Label Text="slept like a baby"  FontSize="11" TextColor="White" HorizontalOptions="Center"  VerticalOptions="End"/>
                         </StackLayout>
                     </Grid>
                     <Slider Minimum="0"
@@ -99,27 +104,29 @@
                             MaximumTrackColor="DarkGray"/>
                     <Label Text="Positives" FontSize="20" TextColor="White" Margin="0,10,0,10"/>
                     <StackLayout Orientation="Horizontal">
-                        <Button x:Name="Relaxed" TextColor="Gray" Text="Relaxed" Clicked="Relaxed_Clicked"/>
-                        <Button x:Name="Grateful" TextColor="Gray" Text="Grateful" Clicked="Grateful_Clicked"/>
-                        <Button x:Name="Happy" TextColor="Gray" Text="Happy" Clicked="Happy_Clicked"/>
+                        <Button x:Name="Relaxed" TextColor="DarkGray" Text="Relaxed" Clicked="Relaxed_Clicked"/>
+                        <Button x:Name="Grateful" TextColor="DarkGray" Text="Grateful" Clicked="Grateful_Clicked"/>
+                        <Button x:Name="Happy" TextColor="DarkGray" Text="Happy" Clicked="Happy_Clicked"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Button x:Name="Contents" TextColor="Gray" Text="Content" Clicked="Contents_Clicked"/>
-                        <Button x:Name="Confident" TextColor="Gray" Text="Confident" Clicked="Confident_Clicked"/>
+                        <Button x:Name="Contents" TextColor="DarkGray" Text="Content" Clicked="Contents_Clicked"/>
+                        <Button x:Name="Confident" TextColor="DarkGray" Text="Confident" Clicked="Confident_Clicked"/>
                     </StackLayout>
                     
                     <Label Text="Negatives" FontSize="20" TextColor="White" Margin="0,10,0,10"/>
                     <StackLayout Orientation="Horizontal">
-                        <Button x:Name="FOMO" TextColor="Gray"  Text="FOMO" Clicked="FOMO_Clicked"/>
-                        <Button x:Name="Chased" TextColor="Gray" Text="Chased" Clicked="Chased_Clicked"/>
-                        <Button x:Name="BrokeRules" TextColor="Gray" Text="Broke Rules" Clicked="BrokeRules_Clicked"/>
+                        <Button x:Name="FOMO" TextColor="DarkGray"  Text="FOMO" Clicked="FOMO_Clicked"/>
+                        <Button x:Name="Chased" TextColor="DarkGray" Text="Chased" Clicked="Chased_Clicked"/>
+                        <Button x:Name="BrokeRules" TextColor="DarkGray" Text="Broke Rules" Clicked="BrokeRules_Clicked"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Button x:Name="Angry" TextColor="Gray" Text="Angry" Clicked="Angry_Clicked"/>
+                        <Button x:Name="Angry" TextColor="DarkGray" Text="Angry" Clicked="Angry_Clicked"/>
                     </StackLayout>
 
                     <Label Text="Comments" FontSize="20" TextColor="White" Margin="0,10,0,10"/>
                     <controls:MEEntry
+                        
+                        Padding="20,20,0,0"
                         x:Name="textbar2"
                         Margin="0,10,0,0"
                         Placeholder="Write your things"
@@ -129,7 +136,14 @@
                         TextColor="White"
                         FontSize="14"
                         VerticalTextAlignment="Start"
-                        PlaceholderColor="Gray"/>
+                        PlaceholderColor="DarkGray"/>
+                    <Button
+                        Margin="25, 20, 25, 10"
+                        FontSize="24"
+                        Text="Save"
+                        TextColor="Black"
+                        BackgroundColor="{StaticResource Active}"
+                        Clicked="Button_Clicked_1"/>
 
                 </StackLayout>
             </ScrollView>

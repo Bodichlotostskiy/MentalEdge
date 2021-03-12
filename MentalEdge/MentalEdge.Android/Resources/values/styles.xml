@@ -15,7 +15,7 @@
          which is used to tint widgets -->
     <!--<item name="colorAccent">#FF4081</item>-->
 	  <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
-    <item name="android:statusBarColor">#100f2d</item>
+    <item name="android:statusBarColor">#1b1d28</item>
   </style>
 
 	<style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
@@ -27,7 +27,7 @@
 		<item name="android:windowIsTranslucent">false</item>
 		<item name="android:windowIsFloating">false</item>
 		<item name="android:backgroundDimEnabled">true</item>
-    <item name="android:statusBarColor">#100f2d</item>
+    <item name="android:statusBarColor">#1b1d28</item>
 	</style>
 	
 </resources>

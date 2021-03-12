@@ -21,7 +21,7 @@ namespace MentalEdge.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync($"//{nameof(Player)}");
+            Shell.Current.FlyoutIsPresented = true;
         }
     }
 }

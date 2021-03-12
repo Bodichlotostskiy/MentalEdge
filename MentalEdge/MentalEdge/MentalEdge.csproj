@@ -6,8 +6,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="lines.svg" />
+    <None Remove="Logo1.svg" />
+    <None Remove="Month.svg" />
+    <None Remove="price.svg" />
+    <None Remove="Pro.svg" />
+    <None Remove="Section.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="lines.svg" />
+    <EmbeddedResource Include="Logo1.svg" />
+    <EmbeddedResource Include="Month.svg" />
+    <EmbeddedResource Include="price.svg" />
+    <EmbeddedResource Include="Pro.svg" />
+    <EmbeddedResource Include="Section.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MagicGradients" Version="1.2.0" />
     <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.10" />
+    <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
+    <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.11.982" />

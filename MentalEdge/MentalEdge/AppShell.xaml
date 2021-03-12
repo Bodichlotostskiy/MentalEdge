@@ -82,11 +82,15 @@
     -->
     
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-    <MenuItem IconImageSource="enter.png" Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked" >
+    <MenuItem IconImageSource="arrow.png" Text="Session" StyleClass="MenuItemLayoutStyle" Clicked="MenuItem_Clicked_1" >
     </MenuItem>
-    <MenuItem IconImageSource="Home.png" Text="Home" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked2" >
+    <MenuItem IconImageSource="arrow.png" Text="Jornal" StyleClass="MenuItemLayoutStyle" Clicked="MenuItem_Clicked_2" >
     </MenuItem>
-    <MenuItem IconImageSource="Vector2.png" Text="Player" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked3">
+    <MenuItem IconImageSource="arrow.png" Text="Add Entry" StyleClass="MenuItemLayoutStyle" Clicked="MenuItem_Clicked_3">
+    </MenuItem>
+    <MenuItem IconImageSource="arrow.png" Text="Change Password" StyleClass="MenuItemLayoutStyle" Clicked="MenuItem_Clicked_4">
+    </MenuItem>
+    <MenuItem IconImageSource="arrow.png" Text="Log Out" StyleClass="MenuItemLayoutStyle" Clicked="MenuItem_Clicked_5">
     </MenuItem>
 
     <!--

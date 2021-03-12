@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:controls="clr-namespace:MentalEdge.Controls"
              mc:Ignorable="d"
-             x:Class="MentalEdge.Views.Player">
+             x:Class="MentalEdge.Views.Player"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" ios:Page.UseSafeArea="true">
     <ContentPage.Content>
         <Grid>
             <RelativeLayout>

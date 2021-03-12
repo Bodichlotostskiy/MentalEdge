@@ -51,7 +51,7 @@ namespace MentalEdge.Views
         {
             if (button1)
             {
-                Relaxed.BackgroundColor = Color.LimeGreen;
+                Relaxed.BackgroundColor = Color.FromHex("#20DF92");
                 button1 = false;
                 Relaxed.TextColor = Color.Black;
             }
@@ -69,7 +69,7 @@ namespace MentalEdge.Views
         {
             if (button2)
             {
-                Grateful.BackgroundColor = Color.LimeGreen;
+                Grateful.BackgroundColor = Color.FromHex("#20DF92");
                 button2 = false;
                 Grateful.TextColor = Color.Black;
             }
@@ -85,7 +85,7 @@ namespace MentalEdge.Views
         {
             if (button3)
             {
-                Happy.BackgroundColor = Color.LimeGreen;
+                Happy.BackgroundColor = Color.FromHex("#20DF92");
                 button3 = false;
                 Happy.TextColor = Color.Black;
             }
@@ -101,7 +101,7 @@ namespace MentalEdge.Views
         {
             if (button4)
             {
-                Contents.BackgroundColor = Color.LimeGreen;
+                Contents.BackgroundColor = Color.FromHex("#20DF92");
                 button4 = false;
                 Contents.TextColor = Color.Black;
             }
@@ -117,7 +117,7 @@ namespace MentalEdge.Views
         {
             if (button5)
             {
-                Confident.BackgroundColor = Color.LimeGreen;
+                Confident.BackgroundColor = Color.FromHex("#20DF92");
                 button5 = false;
                 Confident.TextColor = Color.Black;
             }
@@ -139,7 +139,7 @@ namespace MentalEdge.Views
         {
             if (button6)
             {
-                Angry.BackgroundColor = Color.Red;
+                Angry.BackgroundColor = Color.FromHex("#EB5757");
                 button6 = false;
                 Angry.TextColor = Color.Black;
             }
@@ -155,7 +155,7 @@ namespace MentalEdge.Views
         {
             if (button7)
             {
-                BrokeRules.BackgroundColor = Color.Red;
+                BrokeRules.BackgroundColor = Color.FromHex("#EB5757");
                 button7 = false;
                 BrokeRules.TextColor = Color.Black;
             }
@@ -172,7 +172,7 @@ namespace MentalEdge.Views
         {
             if (button8)
             {
-                Chased.BackgroundColor = Color.Red;
+                Chased.BackgroundColor = Color.FromHex("#EB5757");
                 button8 = false;
 
                 Chased.TextColor = Color.Black;
@@ -190,7 +190,7 @@ namespace MentalEdge.Views
         {
             if (button9)
             {
-                FOMO.BackgroundColor = Color.Red;
+                FOMO.BackgroundColor = Color.FromHex("#EB5757");
                 button9 = false;
 
                 FOMO.TextColor = Color.Black;
@@ -202,6 +202,18 @@ namespace MentalEdge.Views
 
                 FOMO.TextColor = Color.Gray;
             }
+        }
+
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textbar1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(!e.NewTextValue.Contains('$'))
+                textbar1.Text = $"${ e.NewTextValue }";
+
         }
     }
 }

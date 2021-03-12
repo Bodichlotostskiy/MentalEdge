@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="2.1" package="com.mentaledge" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="30" />
-	<application android:label="MentalEdge.Android" android:theme="@style/MainTheme"></application>
+	<application android:icon="@drawable/playstore" android:theme="@style/MainTheme"></application>
 </manifest>

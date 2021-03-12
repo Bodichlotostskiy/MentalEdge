@@ -17,9 +17,9 @@ namespace MentalEdge.Views
             InitializeComponent();
         }
 
-        private  void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.FlyoutIsPresented = true;
+            await Shell.Current.GoToAsync("//Player");
         }
     }
 }

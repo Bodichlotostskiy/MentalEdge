@@ -13,8 +13,9 @@
             <Color x:Key="DarkBlue">Darkblue</Color>
             <Color x:Key="Active">#20DF92</Color>
             <Color x:Key="Red">Red</Color>
+            <Color x:Key="NewRed">#EB5757</Color>
             <Color x:Key="Primary">#16FFFFFF</Color>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#1b1d28</Color>
             <Style TargetType="Button">
                 <Setter Property="HeightRequest" Value="60"></Setter>
                 <Setter Property="CornerRadius" Value="10"></Setter>
@@ -39,7 +40,7 @@
                 </Setter>
             </Style>
             <Style x:Key="BaseStyleTwo" TargetType="Element">
-                <Setter Property="Shell.TabBarBackgroundColor" Value="#1B1D28" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#1b1d28" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="Black"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#999999"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
@@ -56,7 +57,7 @@
                             <magicGradients:CssGradientSource>
                                 <x:String>
                                     <![CDATA[
-                                        linear-gradient( 227.6deg, rgb(16, 15, 45) 0%, #1C3937 100%, rgba(27,57,55,1) 100%)
+                                        linear-gradient( 227.6deg, rgb(16, 15, 45) 0%, #1b1d28 100%)
                                     ]]>
                                 </x:String>
                             </magicGradients:CssGradientSource>
@@ -75,7 +76,7 @@
                                         <magicGradients:CssGradientSource>
                                             <x:String>
                                                 <![CDATA[
-                                                    linear-gradient( 227.6deg, rgb(16, 15, 45) 0%, #1C3937 100%, rgba(27,57,55,1) 100%)
+                                                    linear-gradient(  #1b1d28 100%, rgba(27,57,55,1) 100%)
                                                 ]]>
                                             </x:String>
                                         </magicGradients:CssGradientSource>
